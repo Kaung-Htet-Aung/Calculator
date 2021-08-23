@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: skyblue;
+    }
+    input[type=button]{
+        width:50px;
+        padding: 10px;
+        background-color:black;
+        color:white;
+
+        
+    }
+    #calcu{
+        margin: 100px auto;
+        margin-left: 500px;
+    }
+ 
+   </style>
+</head>
+<body>   
+   <form name="cal">
+    <input type="text"name="display"size="26"><br><br>
+    <input type="button"value="9"onclick="inSeret(9)">
+    <input type="button"value="8"onclick="inSeret(8)">
+    <input type="button"value="7"onclick="inSeret(7)">
+    <input type="button"value="+"onclick="inSeret('+') ">
+    <br><br>
+    <input type="button"value="6"onclick="inSeret(6) ">
+    <input type="button"value="5"onclick="inSeret(5)">
+    <input type="button"value="4"onclick="inSeret(4)">
+    <input type="button"value="-"onclick="inSeret('-')">
+    <br><br>
+    <input type="button"value="3"onclick="inSeret(3)">
+    <input type="button"value="2"onclick="inSeret(2)">
+    <input type="button"value="1"onclick="inSeret(1) ">
+    <input type="button"value="*"onclick=" inSeret('*')">
+    <br><br>
+    <input type="button"value="0"onclick="inSeret(0) ">
+    <input type="button"value="/"onclick="inSeret('/') ">
+    <input type="button"value="%"onclick="inSeret(9)">
+    <input type="button"value="="onclick="equal()"><br><br>
+    <input type="button"value="C"onclick="Clear()">
+    <input type="button"value="Del"onclick="Del()">
+    <input type="button"value="%"onclick="inSeret(9)">
+    <input type="button"value="^"onclick="Sqr()"><br><br>
+
+
+</form> 
+    <script>
+         var dis='';
+         
+         function inSeret(num){      
+         dis=num;
+         cal.display.value+=dis;
+         }
+       function equal(){
+           var x=eval(cal.display.value);
+           cal.display.value=x;
+       }
+       function Clear(num){
+         dis=num;
+         cal.display.value=dis;
+       }
+       function Del(){
+           dis=cal.display.value;
+           dis=dis.substring(0, dis.length-1);
+           cal.display.value=dis;
+       }
+      
+      
+    </script>
+
+
+</body>
+</html>
